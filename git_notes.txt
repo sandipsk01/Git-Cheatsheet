@@ -1,0 +1,113 @@
+Git Architecture:
+
+	Directory--> Staging --> Git Repository
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Step 1: Git Configuration
+	git config --global user.name "fisrtname lastname"
+	git config --global user.emai "emailid"
+
+Step 2: Git Initialisation
+        i) First check whether git has already initialised in present folder or not using following command:
+	git status
+
+	ii) If not initialise using:
+	git init
+
+Step 3: i) Again check git status to track the files.
+
+	ii) To move files to staging phase use:
+		a)For single file:
+				git add FileNameWithExtension
+		b)For multiple files:
+				git add file-1 file-2 file-3
+		c)For all:
+				git add --a    OR git add .
+
+Step 4: To commit changes use:
+	git commit -m "Message"
+
+Step 5: To get the logs:
+	git log    (press q to exit)
+
+Step 6: To delete git repo:
+	rm -rf .git
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Cloning a Remote Git Repository from GitHub to specific folder:
+
+git clone url foldername
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+.gitignore: Ignoring Files in Git:
+
+Step 1: Create .gitignore file in current directory using: touch is used to create file in current directory
+	touch .gitignore
+
+Step 2: Write down file name of file which you want to ignore in git in .gitignore file
+
+Step 3: Ignoring every Specific type of Files:
+	Write down *.extension of file which you want to ignore in git in .gitignore file
+
+Step 4: Ignoring specific type of file from specific location from directory:
+   	Write down file location considering directory location as /filename in git in .gitignore file
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Comparing Staging Area & Working Directory : git diff
+
+Showing Changes Between Commits & Working Directory : git diff --staged
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Skipping The Staging Area and directly commiting tracked files:
+git commit -a -m "message"
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+To delete file from directory: git rm filename.extension
+
+Renaming file:  git mv sample.txt sample_renamed.txt
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Untrack file: git rm --cached file.txt
+
+Untrack folder: git rm -r --cached folder
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Viewing Commits In Git: git log -p
+
+Viewing "n" Commits In Git: git log -p -n
+
+Viewing Commits Summary In Git: git log --stat
+
+Viewing Commits 1 line Summary In Git: git log --pretty=oneline
+
+Viewing Commits In short(author info): git log --pretty=short
+
+Viewing Commits In full(author and commiter info): git log --pretty=full
+
+Viewing Commits of 2 days/months/years: git log --since=2.days
+
+Viewing Commits  In Git: git log --pretty=format:"%placeholder1 --%placeholder2"
+(format allows you to specify which information you want to show.)
+
+Changing Commit In Git: git commit --amend
+to enter (i) & to exit (esc + :wq)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+File Unstaging: git restore --staged file1
+
+File Restoring:  git restore file1
+
+File Restoring: git checkout -- file1
+
+File Restoring back all files: git checkout -f
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
