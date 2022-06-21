@@ -119,3 +119,9 @@ Git Push:  git push -u origin master
 Git alias: git config --global alias.<shortcut> 'command'
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Creating new Branch: git checkout -b branchname
+
+Switching in Branchs: git checkout brachname
+
+Merging Brach: git merge branchname
