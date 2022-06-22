@@ -112,7 +112,11 @@ File Restoring back all files: git checkout -f
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Git Push:  git push -u origin master
+Git Push:  git push -u origin master  or git push origin branchname
+
+Change name in remote: git push origin branchname:changebranchname
+
+Delete remote branch: git push -d origin branchname
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -127,3 +131,9 @@ Switching in Branchs: git checkout brachname
 Merging Brach: git merge branchname
 
 Check last version of every branch: git branch -v
+
+Check already merged branches: git  branch --merged
+
+Check not merged branches: git branch --no -merged
+
+Deleting branches: git branch -d branchname   (gives error if not merged then use D)
