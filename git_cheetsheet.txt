@@ -125,3 +125,5 @@ Creating new Branch: git checkout -b branchname
 Switching in Branchs: git checkout brachname
 
 Merging Brach: git merge branchname
+
+Check last version of every branch: git branch -v
